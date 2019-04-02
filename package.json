@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-dashboard-registry-auth",
+  "description": "Node.js service for user authentication",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Luigi Colombi <lucolombi89@gmail.com>",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.4.8",
+    "argon2": "^0.21.0",
+    "express": "^4.16.4",
+    "graphql": "^14.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.4.20",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
