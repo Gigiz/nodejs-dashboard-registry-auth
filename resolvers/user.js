@@ -19,7 +19,7 @@ const resolvers = {
       const user = await User.findOne({
         username: args.username,
       });
-      if (await argon2.verify(user._doc.password, args.password)) {
+      if (user && await argon2.verify(user._doc.password, args.password)) {
         const { JWT_SECRET } = process.env;
         delete user._doc.password;
         return jwt.sign(user._doc, JWT_SECRET);
